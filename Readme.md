@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Mashustik](https://up.htmlacademy.ru/adaptive/15/user/683237).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Коробейников](https://htmlacademy.ru/profile/rkorobeynikov).
 
 ---
 
