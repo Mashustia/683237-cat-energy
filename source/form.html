@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,11 +28,10 @@
     </nav>
   </header>
 
-  <main>
-    <h1 class="page-title">Подбор индивидуальной программы питания</h1>
+  <main class="inner-page">
+    <h1 class="inner-page__title">Подбор программы</h1>
     <section class="program-selection">
       <h2 class="visually-hidden">Анкета</h2>
-      <b class="program-selection__caption">Подбор программы</b>
       <p class="program-selection__text">Заполните анкету и мы подберем
       программу питания для вашего кота</p>
       <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
@@ -116,14 +116,14 @@
             </li>
           </ul>
         </fieldset>
-        <button class="program-selection__button button" type="submit">Отправить заявку</button>
+        <button class="program-selection__button button button--green" type="submit">Отправить заявку</button>
       </form>
       <span class="program-selection__transcript">* — Обязательные поля</span>
     </section>
   </main>
 
   <footer class="main-footer">
-    <section class="contacts">
+    <section class="contacts contacts--transparent">
       <h2 class="visually-hidden">Наш адрес</h2>
       <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>

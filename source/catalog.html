@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,8 +28,8 @@
     </nav>
   </header>
 
-  <main>
-    <h1 class="page-title">Каталог продукции</h1>
+  <main class="inner-page">
+    <h1 class="inner-page__title">Каталог продукции</h1>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог кормов Cat Energy</h2>
       <ul class="catalog__list">
@@ -51,7 +52,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">700 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -72,7 +73,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">1000 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -93,7 +94,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">700 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -114,7 +115,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">1000 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -135,7 +136,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">400 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -156,7 +157,7 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">700 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="catalog__item product">
           <h3 class="product__title">
@@ -177,13 +178,13 @@
             <span class="product__left-column">Цена</span>
             <span class="product__right-column">500 Р.</span>
           </p>
-          <a class="product__order-link button" href="#">Заказать</a>
+          <a class="product__order-link button button--green" href="#">Заказать</a>
         </li>
       </ul>
       <div class="catalog__more-products more-products">
-        <p class="more-products__text">Показать еще 100500 товаров</p>
-        <p class="more-products__text">На самом деле вкусов гораздо больше!</p>
-        <a class="more-products__link button" href="#">Показать все</a>
+        <p class="more-products__text-1">Показать еще 100500 товаров</p>
+        <p class="more-products__text-2">На самом деле вкусов гораздо больше!</p>
+        <a class="more-products__link button button--gray" href="#">Показать все</a>
       </div>
     </section>
     <section class="additional-products">
@@ -197,7 +198,7 @@
             <span class="extra__left-column">1 упаковка (100 г)</span>
             <span class="extra__rigth-column">100 Р.</span>
           </p>
-          <a class="extra__order-link button" href="#">Заказать</a>
+          <a class="extra__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="additional-products__item extra">
           <h3 class="extra__title">
@@ -207,7 +208,7 @@
             <span class="extra__left-column">5 литров</span>
             <span class="extra__rigth-column">50 Р.</span>
           </p>
-          <a class="extra__order-link button" href="#">Заказать</a>
+          <a class="extra__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="additional-products__item extra">
           <h3 class="extra__title">
@@ -217,7 +218,7 @@
             <span class="extra__left-column">1 литр</span>
             <span class="extra__rigth-column">100 Р.</span>
           </p>
-          <a class="extra__order-link button" href="#">Заказать</a>
+          <a class="extra__order-link button button--green" href="#">Заказать</a>
         </li>
         <li class="additional-products__item extra">
           <h3 class="extra__title">
@@ -227,7 +228,7 @@
             <span class="extra__left-column">1 упаковка (30 г)</span>
             <span class="extra__rigth-column">300 Р.</span>
           </p>
-          <a class="extra__order-link button" href="#">Заказать</a>
+          <a class="extra__order-link button button--green" href="#">Заказать</a>
         </li>
       </ul>
     </section>
@@ -237,7 +238,7 @@
   </main>
 
   <footer class="main-footer">
-    <section class="contacts">
+    <section class="contacts contacts--transparent">
       <h2 class="visually-hidden">Наш адрес</h2>
       <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
