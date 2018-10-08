@@ -1,3 +1,7 @@
+.programs__list {
+  .list-reset();
+}
+
 .programs__item {
   background-color: @background-color-minor;
 }
@@ -20,4 +24,15 @@
   color: @text-color-titles;
   background-color: @background-color-minor;
   text-transform: uppercase;
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+  }
 }

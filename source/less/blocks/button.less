@@ -7,6 +7,10 @@
   display: block;
   text-transform: uppercase;
   border: none;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 7px;
 
   &--index {
     font-size: 14px;
@@ -21,5 +25,13 @@
   &--gray {
     color: @text-color-main;
     background-color: @background-color-minor;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    padding-top: 13px;
+    padding-bottom: 11px;
   }
 }

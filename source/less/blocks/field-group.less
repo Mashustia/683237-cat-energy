@@ -1,7 +1,52 @@
+.field-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.field-group__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .field-group__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
   color: @text-color-titles;
   background-color: @background-color-main;
+}
+
+.field-group__list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .field-group__wrapper {
+    width: 708px;
+  }
+
+  .field-group__list--extra {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filling-field--extra {
+    width: 285px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-group__wrapper {
+    width: 1220px;
+
+    &--cat-data {
+      width: 570px;
+    }
+  }
+
+  .field-group__list--contact-details {
+    display: flex;
+    justify-content: space-between;
+  }
 }

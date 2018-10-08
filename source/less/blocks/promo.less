@@ -10,10 +10,41 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
 }
 
 .promo__slogan {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
+}
+
+.promo__image {
+  background-color: red;
+  width: 280px;
+  height: 270px;
+  // заменить на норм картинку
+}
+
+@media (min-width: @tablet-width) {
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @text-color-titles;
+    text-align: left;
+    width: 415px;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @text-color-titles;
+    text-align: left;
+    width: 415px;
+  }
+
+  .promo__link {
+    width: 245px;
+  }
 }

@@ -6,3 +6,37 @@
   background-color: @background-color-main;
   font-weight: 400;
 }
+
+.advantages__list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 245px;
+    margin-right: 140px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .advantages__item {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    margin-right: 80px;
+
+    &:nth-child(4) {
+      margin-right: 0;
+    }
+  }
+}

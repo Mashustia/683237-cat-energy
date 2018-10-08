@@ -1,3 +1,17 @@
+.extra {
+  padding: 0;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:nth-child(1) {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.extra__title {
+  margin: 0;
+}
+
 .extra__link {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -6,8 +20,47 @@
   background-color: @background-color-main;
   text-transform: uppercase;
   font-weight: 400;
+  display: block;
 }
 
 .extra__data {
   line-height: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    width: 100%;
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    width: 895px;
+    justify-content: flex-start;
+  }
+
+  .extra__data {
+    width: 285px;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  .extra__rigth-column {
+    width: 45px;
+  }
+
+  .extra__order-link {
+    width: 245px;
+    margin-left: 39px;
+  }
 }
