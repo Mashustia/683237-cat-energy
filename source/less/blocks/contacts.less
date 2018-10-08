@@ -11,6 +11,8 @@
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 280px;
 }
 
 .contacts__text {
@@ -30,9 +32,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
-    // padding-left: 40px;
-    // padding-right: 40px;
+  .contacts__wrapper {
     width: 630px;
     margin: 0 auto;
   }
@@ -53,11 +53,21 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrapper {
     width: 570px;
     padding-left: 76px;
     padding-right: 90px;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: @background-color-main;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 3;
   }
 }
