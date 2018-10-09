@@ -1,3 +1,42 @@
+.map {
+  position: relative;
+}
+
 .map__image {
   background-color: @background-color-minor;
+  width: 320px; //удалить
+  height: 362px; //удалить
+}
+
+.map__iframe {
+  border: none;
+  height: 362px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .map__image {
+    width: 767px; //удалить
+    height: 400px; //удалить
+  }
+
+  .map__iframe {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__image {
+    width: 1440px; //удалить
+    height: 400px; //удалить
+  }
+
+  .map__iframe {
+    height: 400px;
+  }
 }

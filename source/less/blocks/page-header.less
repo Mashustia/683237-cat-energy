@@ -1,3 +1,24 @@
-.page-header {
-  box-sizing: border-box;
+.page-header__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-header__wrapper {
+    width: 1220px;
+  }
 }

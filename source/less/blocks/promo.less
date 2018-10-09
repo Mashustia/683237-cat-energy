@@ -1,19 +1,118 @@
 .promo {
-  background-image: url("../img/index-promo-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
   font-family: "Oswald", sans-serif;
   color: @text-color-minor;
+  margin-bottom: 22px;
 }
 
 .promo__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
+  margin: 0;
 }
 
 .promo__slogan {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
+}
+
+.promo__image {
+  background-color: red;
+  width: 280px;
+  height: 270px;
+  opacity: 0.5;
+  // заменить на норм картинку
+}
+
+@media (max-width: @mobile-width-only) {
+  .promo {
+    background-image: url("../img/index-promo-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    margin-bottom: 0;
+  }
+
+  .promo__wrapper {
+    position: relative;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @text-color-titles;
+    text-align: left;
+    width: 415px;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: @text-color-titles;
+    text-align: left;
+    width: 415px;
+  }
+
+  .promo__image {
+    width: 709px; //удалить
+    height: 609px; //удалить
+  }
+
+  .promo__link {
+    width: 245px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+  }
+
+  .promo__title,
+  .promo__slogan,
+  .promo__link {
+    margin-left: 89px;
+    margin-right: 89px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-bottom: 80px;
+    margin-top: -108px;
+  }
+
+  .promo__wrapper {
+    padding-top: 226px;
+  }
+
+  .promo__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  .promo__image {
+    width: 552px; //удалить
+    height: 499px; //удалить
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    margin-left: -159px;
+  }
+
+  .promo__link {
+    position: static;
+    margin-bottom: 273px; //удалить
+  }
+
+  .promo__title,
+  .promo__slogan,
+  .promo__link {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
 }

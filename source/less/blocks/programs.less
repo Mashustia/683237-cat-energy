@@ -1,3 +1,7 @@
+.programs__list {
+  .list-reset();
+}
+
 .programs__item {
   background-color: @background-color-minor;
 }
@@ -10,6 +14,7 @@
   background-color: @background-color-minor;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .programs__link {
@@ -20,4 +25,15 @@
   color: @text-color-titles;
   background-color: @background-color-minor;
   text-transform: uppercase;
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+  }
 }

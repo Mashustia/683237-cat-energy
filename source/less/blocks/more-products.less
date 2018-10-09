@@ -1,3 +1,15 @@
+.more-products {
+  display: flex;
+}
+
+.more-products__wrapper {
+  width: 320px;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+}
+
 .more-products__text-1 {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -10,4 +22,21 @@
 .more-products__text-2 {
   font-size: 12px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .more-products__wrapper {
+    width: 324px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 40px;
+    padding-top: 55px;
+    border: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more-products__wrapper {
+    width: 245px;
+  }
 }

@@ -3,11 +3,13 @@
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
+  display: flex;
 }
 
 .filling-field__label {
   color: @text-color-form;
   background-color: @background-color-main;
+  flex-shrink: 0;
 }
 
 .filling-field__input,
@@ -16,4 +18,20 @@
   color: @text-color-main;
   background-color: @background-color-main;
   text-transform: uppercase;
+}
+
+.filling-field__input {
+  &--auto-width {
+    width: 100%;
+  }
+}
+
+.filling-field__text {
+  width: 100%;
+}
+
+@media (min-width: @desktop-width) {
+  .filling-field--contact-details {
+    width: 570px;
+  }
 }

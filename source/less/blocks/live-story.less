@@ -11,12 +11,18 @@
   font-weight: 400;
 }
 
+.live-story__data {
+  display: flex;
+  justify-content: space-between;
+}
+
 .live-story__cost {
   font-family: "Oswald", sans-serif;
   line-height: 20px;
   color: @text-color-titles;
   background-color: @background-color-minor;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .live-story__button {
@@ -27,4 +33,37 @@
   background-color: @background-color-minor;
   text-transform: uppercase;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .live-story__data-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .live-story__data {
+    justify-content: flex-start;
+  }
+
+  .live-story__cost {
+    width: 180px;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .live-story__text {
+    width: 435px;
+  }
+
+  .live-story__data-wrapper {
+    flex-direction: column;
+  }
+
+  .live-story__cost {
+    width: 328px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

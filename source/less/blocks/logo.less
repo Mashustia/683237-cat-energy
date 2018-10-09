@@ -1,3 +1,29 @@
 .logo {
-  box-sizing: border-box;
+  height: 65px;
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+  width: 320px;
+  background-color: red;
+
+  &--footer {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    width: 174px;
+    height: 60px;
+    border-bottom-color: transparent;
+
+    &--footer {
+      width: 162px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    width: 203px;
+  }
 }
