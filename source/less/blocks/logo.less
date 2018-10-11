@@ -1,13 +1,16 @@
 .logo {
-  height: 65px;
-  display: block;
   border-bottom: 1px solid #e6e6e6;
   width: 320px;
-  background-color: red;
+  display: flex;
+}
 
-  &--footer {
-    width: 280px;
-  }
+.logo__img {
+  width: 191px;
+  height: 39px;
+  background-color: @background-color-main;
+  margin-top: 11px;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -15,15 +18,22 @@
     width: 174px;
     height: 60px;
     border-bottom-color: transparent;
+  }
 
-    &--footer {
-      width: 162px;
-    }
+  .logo__img {
+    width: 174px;
+    height: 59px;
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .logo {
     width: 203px;
+  }
+
+  .logo__img {
+    width: 203px;
+    height: 60px;
   }
 }

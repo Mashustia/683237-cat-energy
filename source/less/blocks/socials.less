@@ -2,6 +2,8 @@
   border-bottom: 1px solid #e6e6e6;
   width: 280px;
   margin: 0 auto;
+  padding-top: 23px;
+  padding-bottom: 20px;
 }
 
 .socials__list {
@@ -13,8 +15,37 @@
   margin-right: auto;
 }
 
+.socials__link {
+  width: 22px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.socials__image {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @media (min-width: @tablet-width) {
   .socials {
     border-bottom-color: transparent;
+    padding: 0;
+  }
+
+  // предварительно для построения сетки, далее будет удалено
+  .socials__image--vkontakte {
+    width: 30px; //временно
+    height: 16px; //временно
+  }
+
+  .socials__image--instagram {
+    width: 23px; //временно
+    height: 23px; //временно
+  }
+
+  .socials__image--facebook {
+    width: 14px; //временно
+    height: 28px; //временно
   }
 }

@@ -1,5 +1,7 @@
 .live-story {
   background-color: @background-color-minor;
+  padding-top: 17px;
+  padding-bottom: 35px;
 }
 
 .live-story__title {
@@ -9,11 +11,20 @@
   color: @text-color-titles;
   background-color: @background-color-minor;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.live-story__text {
+  margin: 0;
+  width: 267px;
+  margin-bottom: 25px;
 }
 
 .live-story__data {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .live-story__cost {
@@ -23,6 +34,21 @@
   background-color: @background-color-minor;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.live-story__cat-image {
+  width: 280px; //временно
+  height: 240px; //временно
+  margin-bottom: 30px; //временно
+}
+
+.live-story__button-group {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .live-story__button {
@@ -36,25 +62,94 @@
 }
 
 @media (min-width: @tablet-width) {
+  .live-story {
+    padding-top: 41px;
+    padding-bottom: 74px;
+    background-color: @background-color-main;
+  }
+
+  .live-story__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 65px;
+    background-color: @background-color-main;
+  }
+
+  .live-story__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 676px;
+    margin-bottom: 53px;
+  }
+
   .live-story__data-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 66px;
   }
 
   .live-story__data {
-    justify-content: flex-start;
+    width: 366px;
+    margin: 0;
   }
 
   .live-story__cost {
     width: 180px;
     font-size: 20px;
     text-align: right;
+    margin: 0;
+    margin-top: 12px;
+    background-color: @background-color-main;
+  }
+
+  .live-story__span {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  .live-story__cat-image {
+    width: 690px;
+    height: 517px;
+    margin-bottom: 18px;
+  }
+
+  .live-story__button-group {
+    width: 579px;
+  }
+
+  .live-story__button {
+    font-size: 20px;
+    line-height: 20px;
+    background-color: @background-color-main;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .live-story {
+    padding-top: 0;
+    padding-bottom: 9px;
+  }
+
+  .live-story__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .live-story__left-column {
+    padding-top: 53px;
+  }
+
+  .live-story__title {
+    margin-bottom: 146px;
+  }
+
   .live-story__text {
     width: 435px;
+    margin-bottom: 68px;
+  }
+
+  .live-story__data {
+    margin-bottom: 40px;
   }
 
   .live-story__data-wrapper {
@@ -65,5 +160,26 @@
     width: 328px;
     display: flex;
     justify-content: space-between;
+    margin: 0;
+  }
+
+  .live-story__span {
+    margin: 0;
+  }
+
+  .live-story__cat-image {
+    width: 650px; //временно для сетки
+    height: 517px; //временно для сетки
+    margin-bottom: 0;
+  }
+
+  .live-story__button-group {
+    margin-right: 0;
+    margin-top: 37px;
+    width: 571px;
+  }
+
+  .live-story__button {
+    padding: 0;
   }
 }

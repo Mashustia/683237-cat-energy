@@ -17,8 +17,8 @@
   color: @text-color-titles;
   display: block;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 22px;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,6 +30,25 @@
     font-weight: 400;
     line-height: 25px;
   }
+
+  .site-list__link {
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .site-list__link:not([href])::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    background-color: @background-color-green;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -39,5 +58,17 @@
     justify-content: space-between;
     font-size: 20px;
     background-color: transparent;
+
+    &--index {
+      color: @text-color-minor;
+    }
+  }
+
+  .site-list__link--index {
+    color: @text-color-minor;
+  }
+
+  .site-list__link--index:not([href])::after {
+    background-color: @text-color-minor;
   }
 }
