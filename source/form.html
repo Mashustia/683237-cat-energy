@@ -31,104 +31,110 @@
     </header>
 
     <main class="inner-page">
-      <h1 class="inner-page__title inner-page__title--without-frame">Подбор программы</h1>
+      <h1 class="inner-page__title inner-page__title--without-frame inner-page__title--form-page">Подбор программы</h1>
+      <p class="inner-page__text"><span class="inner-page__text-wrapper">Заполните анкету и мы подберем программу питания для вашего кота</span></p>
       <section class="program-selection">
         <h2 class="visually-hidden">Анкета</h2>
-        <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="program-selection__field-group field-group">
-            <legend class="field-group__title visually-hidden">О коте</legend>
+          <fieldset class="program-selection__field-group field-group field-group--cat-data">
+            <legend class="visually-hidden">О коте</legend>
             <div class="field-group__wrapper field-group__wrapper--cat-data">
               <ul class="field-group__list">
                 <li class="field-group__item filling-field">
                   <label class="filling-field__label" for="cats-name">Имя:*</label>
-                  <input class="filling-field__input filling-field__input--auto-width" type="text" id="cats-name" name="cats-name" placeholder="Барсик">
+                  <input class="filling-field__input filling-field__input--cat-data filling-field__input--auto-width" type="text" id="cats-name" name="cats-name" placeholder="Барсик">
                 </li>
                 <li class="field-group__item filling-field">
                   <label class="filling-field__label" for="cats-weight">Вес (кг):*</label>
-                  <input class="filling-field__input filling-field__input--auto-width" type="text" id="cats-weight" name="cats-weight" placeholder="7">
+                  <input class="filling-field__input filling-field__input--cat-data filling-field__input--auto-width" type="text" id="cats-weight" name="cats-weight" placeholder="7">
                 </li>
                 <li class="field-group__item filling-field">
                   <label class="filling-field__label" for="cats-age">Возраст (лет):</label>
-                  <input class="filling-field__input filling-field__input--auto-width" type="text" id="cats-age" name="cats-age" placeholder="7">
+                  <input class="filling-field__input filling-field__input--cat-data filling-field__input--auto-width" type="text" id="cats-age" name="cats-age" placeholder="7">
                 </li>
               </ul>
             </div>
           </fieldset>
 
-          <fieldset class="program-selection__field-group field-group">
-            <legend class="field-group__title visually-hidden">Выбор диеты</legend>
-            <div class="field-group__wrapper field-group__wrapper--cat-data">
+          <fieldset class="program-selection__field-group field-group field-group--programs-choice">
+            <legend class="visually-hidden">Выбор диеты</legend>
+            <div class="field-group__wrapper field-group__wrapper--programs-choice">
               <ul class="field-group__list">
-                <li class="field-group__item filling-field">
-                  <label class="filling-field__label" for="weight-lose">Похудение</label>
-                  <input class="filling-field__input" type="radio" name="diet-type" id="weight-lose" value="weight-lose" checked>
+                <li class="field-group__item filling-field filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="radio" name="diet-type" id="weight-lose" value="weight-lose" checked>
+                  <label class="filling-field__label filling-field__label--checkbox filling-field__label--round" for="weight-lose">Похудение</label>
                 </li>
-                <li class="field-group__item filling-field">
-                  <label class="filling-field__label" for="weight-gain">Набор массы</label>
-                  <input class="filling-field__input" type="radio" name="diet-type" id="weight-gain" value="weight-gain">
+                <li class="field-group__item filling-field filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="radio" name="diet-type" id="weight-gain" value="weight-gain">
+                  <label class="filling-field__label filling-field__label--checkbox filling-field__label--round" for="weight-gain">Набор массы</label>
                 </li>
-                <li class="field-group__item filling-field">
-                  <label class="filling-field__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
-                  <input class="filling-field__input" type="radio" name="diet-type" id="need-advice" value="need-advice">
+                <li class="field-group__item filling-field filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="radio" name="diet-type" id="need-advice" value="need-advice">
+                  <label class="filling-field__label filling-field__label--checkbox filling-field__label--round" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </div>
           </fieldset>
 
-          <fieldset class="program-selection__field-group field-group">
-            <legend class="field-group__title">Контактные данные (владельца кота)</legend>
-            <div class="field-group__wrapper">
+          <fieldset class="program-selection__field-group field-group field-group--contact-details">
+            <legend class="field-group__title">
+              <div class="field-group__title-wrapper"><span class="field-group__span field-group__span--contact-details">Контактные данные (владельца кота)</span></div>
+            </legend>
+            <div class="field-group__wrapper field-group__wrapper--contact-details">
               <ul class="field-group__list field-group__list--contact-details">
                 <li class="field-group__item filling-field filling-field--contact-details">
                   <label class="filling-field__label" for="email">E-mail:*</label>
-                  <input class="filling-field__input filling-field__input--auto-width" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+                  <input class="filling-field__input filling-field__input--auto-width filling-field__input--contact-details" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
                 </li>
                 <li class="field-group__item filling-field filling-field--contact-details">
                   <label class="filling-field__label" for="tel-number">Телефон:*</label>
-                  <input class="filling-field__input filling-field__input--auto-width" type="tel" name="tel-number" id="tel-number" placeholder="8 (960) 900-60-90">
+                  <input class="filling-field__input filling-field__input--auto-width filling-field__input--contact-details" type="tel" name="tel-number" id="tel-number" placeholder="8 (960) 900-60-90">
                 </li>
               </ul>
             </div>
           </fieldset>
 
-          <fieldset class="program-selection__field-group field-group">
-            <legend class="field-group__title">Комментарий</legend>
+          <fieldset class="program-selection__field-group field-group field-group--about-cat">
+            <legend class="field-group__title">
+              <div class="field-group__title-wrapper"><span class="field-group__span">Комментарий</span></div>
+            </legend>
             <div class="field-group__wrapper">
               <ul class="field-group__list">
                 <li class="field-group__item filling-field">
                   <label class="filling-field__label" for="comment"><span class="visually-hidden">Расскажите обо всех повадках кота</span></label>
-                  <textarea class="filling-field__text" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+                  <textarea class="filling-field__text" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </li>
               </ul>
             </div>
           </fieldset>
 
-          <fieldset class="program-selection__field-group field-group">
-            <legend class="field-group__title">Дополнительно</legend>
-            <div class="field-group__wrapper">
+          <fieldset class="program-selection__field-group field-group field-group--extra">
+            <legend class="field-group__title field-group__title--extra"><div class="field-group__title-wrapper"><span class="field-group__span">Дополнительно</span></div></legend>
+            <div class="field-group__wrapper field-group__wrapper--extra">
               <ul class="field-group__list field-group__list--extra">
-                <li class="field-group__item filling-field filling-field--extra">
-                  <label class="filling-field__label" for="sweetener">Сахарозаменитель</label>
-                  <input class="filling-field__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                <li class="field-group__item filling-field filling-field--extra filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <label class="filling-field__label filling-field__label--checkbox" for="sweetener">Сахарозаменитель</label>
                 </li>
-                <li class="field-group__item filling-field filling-field--extra">
-                  <label class="filling-field__label" for="water">Питьевая вода</label>
-                  <input class="filling-field__input" type="checkbox" name="water" id="water">
+                <li class="field-group__item filling-field filling-field--extra filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="checkbox" name="water" id="water">
+                  <label class="filling-field__label filling-field__label--checkbox" for="water">Питьевая вода</label>
                 </li>
-                <li class="field-group__item filling-field filling-field--extra">
-                  <label class="filling-field__label" for="milk">Молоко</label>
-                  <input class="filling-field__input" type="checkbox" name="milk" id="milk">
+                <li class="field-group__item filling-field filling-field--extra filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="checkbox" name="milk" id="milk">
+                  <label class="filling-field__label filling-field__label--checkbox" for="milk">Молоко</label>
                 </li>
-                <li class="field-group__item filling-field filling-field--extra">
-                  <label class="filling-field__label" for="vitamins">Витамины</label>
-                  <input class="filling-field__input" type="checkbox" name="vitamins" id="vitamins">
+                <li class="field-group__item filling-field filling-field--extra filling-field--checkbox">
+                  <input class="filling-field__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+                  <label class="filling-field__label filling-field__label--checkbox" for="vitamins">Витамины</label>
                 </li>
               </ul>
             </div>
           </fieldset>
-          <button class="program-selection__button button button--green" type="submit">Отправить заявку</button>
-          <span class="program-selection__transcript">* — Обязательные поля</span>
+          <div class="program-selection__button-block-group">
+            <button class="program-selection__button button button--green" type="submit">Отправить заявку</button>
+            <span class="program-selection__transcript">* — Обязательные поля</span>
+          </div>
         </form>
       </section>
     </main>
@@ -137,8 +143,8 @@
       <section class="contacts contacts--transparent">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Наш адрес</h2>
-          <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="contacts__text">Приглашаем <br>к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<span class="contacts__span"> Санкт-Петербург</span></p>
         </div>
       </section>
       <section class="map">
@@ -147,7 +153,7 @@
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4546686702483!2d30.320360984000754!3d59.9386919969057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538859445882" width="320" height="362" allowfullscreen></iframe>
       </section>
       <div class="main-footer__block-group container">
-        <a class="main-footer__logo-footer logo-footer">
+        <a class="main-footer__logo-footer logo-footer" href="index.html">
           <img class="logo-footer__image" src="img/logo-footer.svg" alt="Логотип Cat Energy" width="128" height="24">
         </a>
         <section class="main-footer__socials socials">
