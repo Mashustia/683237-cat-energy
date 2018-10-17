@@ -2,15 +2,25 @@
   border-bottom: 1px solid #e6e6e6;
   width: 320px;
   display: flex;
+  transition: 0.15s;
 }
 
 .logo__img {
   width: 191px;
   height: 39px;
   background-color: @background-color-main;
-  margin-top: 11px;
-  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 14px;
   margin-left: 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: @tablet-width) {

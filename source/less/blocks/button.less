@@ -11,6 +11,7 @@
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: 0.15s;
 
   &--index {
     font-size: 14px;
@@ -20,11 +21,29 @@
   &--green {
     color: @text-color-button;
     background-color: @background-color-button;
+
+    &:hover,
+    &:focus {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--gray {
     color: @text-color-main;
     background-color: @background-color-minor;
+
+    &:hover,
+    &:focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 

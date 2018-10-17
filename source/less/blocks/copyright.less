@@ -8,10 +8,38 @@
   padding-bottom: 20px;
 }
 
-.copyright__text {
+.copyright:hover .copyright__image {
+  fill: @background-color-green;
+}
+
+.copyright:active .copyright__image {
+  opacity: 0.3;
+}
+
+.copyright__link {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
+  display: block;
+  color: @text-color-main;
+  cursor: pointer;
+}
+
+.copyright__link:focus ~ .copyright__link .copyright__image {
+  fill: @background-color-green;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+.copyright__link:focus .copyright__image {
+  fill: @background-color-green;
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
 }
 
 @media (min-width: @tablet-width) {

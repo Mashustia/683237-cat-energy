@@ -61,6 +61,7 @@
   text-transform: uppercase;
   display: block;
   position: relative;
+  transition: 0.15s;
 
   &::before {
     position: absolute;
@@ -73,6 +74,21 @@
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    width: 33px;
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
 

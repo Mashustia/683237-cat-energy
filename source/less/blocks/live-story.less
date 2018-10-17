@@ -1,7 +1,7 @@
 .live-story {
   background-color: @background-color-minor;
   padding-top: 17px;
-  padding-bottom: 35px;
+  padding-bottom: 31px;
 }
 
 .live-story__title {
@@ -38,34 +38,12 @@
   margin-bottom: 35px;
 }
 
-.live-story__cat-image {
-  width: 280px; //временно
-  height: 240px; //временно
-  margin-bottom: 30px; //временно
-}
-
-.live-story__button-group {
-  width: 210px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.live-story__button {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: @text-color-titles;
-  background-color: @background-color-minor;
-  text-transform: uppercase;
-  border: none;
-}
-
 @media (min-width: @tablet-width) {
   .live-story {
     padding-top: 41px;
-    padding-bottom: 74px;
+    padding-bottom: 69px;
     background-color: @background-color-main;
+    background-image: linear-gradient(to bottom, @background-color-main 57.2%, @background-color-minor 57.2%);
   }
 
   .live-story__title {
@@ -106,28 +84,13 @@
     display: block;
     margin-bottom: 9px;
   }
-
-  .live-story__cat-image {
-    width: 690px;
-    height: 517px;
-    margin-bottom: 18px;
-  }
-
-  .live-story__button-group {
-    width: 579px;
-  }
-
-  .live-story__button {
-    font-size: 20px;
-    line-height: 20px;
-    background-color: @background-color-main;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .live-story {
     padding-top: 0;
     padding-bottom: 9px;
+    background-image: linear-gradient(to bottom, @background-color-main 28.92%, @background-color-minor 28.92%);
   }
 
   .live-story__container {
@@ -161,25 +124,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
+    background-color: transparent;
   }
 
   .live-story__span {
     margin: 0;
-  }
-
-  .live-story__cat-image {
-    width: 650px; //временно для сетки
-    height: 517px; //временно для сетки
-    margin-bottom: 0;
-  }
-
-  .live-story__button-group {
-    margin-right: 0;
-    margin-top: 37px;
-    width: 571px;
-  }
-
-  .live-story__button {
-    padding: 0;
   }
 }

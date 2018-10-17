@@ -5,6 +5,7 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+  position: relative;
 
   &--checkbox {
     padding-left: 46px;
@@ -17,6 +18,14 @@
   background-color: @background-color-main;
   flex-shrink: 0;
   position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filling-field__input:focus + .filling-field__label::before {
+  outline: auto 2px Highlight;
 }
 
 .filling-field__input + .filling-field__label--checkbox::before {
@@ -28,6 +37,10 @@
   width: 30px;
   height: 30px;
   border: solid 1px #cdcdcd;
+}
+
+.filling-field__input:hover + .filling-field__label--checkbox::before {
+  border-color: #bababa;
 }
 
 .filling-field__input + .filling-field__label--checkbox::after {
@@ -68,7 +81,16 @@
 }
 
 .filling-field__input {
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: @text-color-main;
+    border-width: 2px;
+  }
 
   &--auto-width {
     width: 100%;
@@ -76,10 +98,26 @@
 
   &--cat-data,
   &--contact-details {
-    padding-top: 13px;
-    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 13px;
     padding-right: 16px;
     padding-left: 15px;
+
+    &:focus {
+      padding-top: 11px;
+      padding-bottom: 12px;
+      padding-right: 15px;
+      padding-left: 14px;
+    }
+
+    &:invalid {
+      border-color: #ff8282;
+      border-width: 2px;
+      padding-top: 11px;
+      padding-bottom: 12px;
+      padding-right: 15px;
+      padding-left: 14px;
+    }
   }
 
   &--cat-data {
@@ -90,6 +128,10 @@
     margin-left: 10px;
     padding-right: 32px;
   }
+
+  &:not:required {
+    border-color: #ff8282;
+  }
 }
 
 .filling-field__text {
@@ -99,7 +141,42 @@
   padding-right: 12px;
   padding-left: 14px;
   min-height: 150px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e6e6e6;
+  resize: vertical;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: @text-color-main;
+    border-width: 2px;
+    padding-right: 11px;
+    padding-left: 13px;
+    padding-top: 12px;
+  }
+
+  &:active {
+    border-color: @text-color-main;
+  }
+}
+
+.filling-field__image {
+  position: absolute;
+
+  &--mail {
+    right: 16px;
+    top: 15px;
+  }
+
+  &--phone {
+    right: 12px;
+    top: 13px;
+  }
+}
+
+.filling-field__input:focus ~ .filling-field__image {
+  fill: @background-color-green;
 }
 
 @media (min-width: @tablet-width) {
@@ -141,6 +218,21 @@
       padding-bottom: 10px;
       padding-right: 20px;
       padding-left: 20px;
+      line-height: 30px;
+
+      &:focus {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-right: 19px;
+        padding-left: 19px;
+      }
+
+      &:invalid {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-right: 19px;
+        padding-left: 19px;
+      }
     }
 
     &--cat-data {
@@ -178,6 +270,25 @@
     padding-bottom: 11px;
     padding-right: 18px;
     padding-left: 18px;
+    overflow-x: hidden;
+
+    &:focus {
+      padding-top: 9px;
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+
+  .filling-field__image {
+    &--mail {
+      right: 19px;
+      top: 19px;
+    }
+
+    &--phone {
+      right: 16px;
+      top: 16px;
+    }
   }
 }
 
@@ -201,12 +312,17 @@
     }
   }
 
-  // .filling-field--contact-details {
-  //   width: 570px;
-  //   margin-bottom: 0;
-  // }
-
   .filling-field__text {
     padding-top: 10px;
+  }
+
+  .filling-field__image {
+    &--mail {
+      right: 22px;
+    }
+
+    &--phone {
+      right: 18px;
+    }
   }
 }
