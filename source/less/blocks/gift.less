@@ -4,26 +4,71 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 280px;
-  height: 289px;
-  // margin: 0 auto;
+  // height: 289px;
+  padding-top: 187px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-bottom: 42px;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 61px;
+    background-color: red; //удалить
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .gift__text {
   font-size: 16px;
   line-height: 20px;
   color: @text-color-minor;
+  margin: 0;
+  width: 161px;
 }
 
 @media (min-width: @tablet-width) {
   .gift {
     width: 708px;
-    height: 200px;
+    // height: 200px;
+    padding-top: 72px;
+    padding-right: 124px;
+    padding-bottom: 68px;
+
+    &::before {
+      left: 91px;
+      transform: none;
+    }
+  }
+
+  .gift__text {
+    margin-left: auto;
+    text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gift {
     width: 245px;
-    height: 289px;
+    // height: 289px;
+    padding-top: 187px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-bottom: 42px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .gift__text {
+    margin: 0;
+    text-align: center;
   }
 }

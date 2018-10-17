@@ -1,0 +1,54 @@
+.scale-2 {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .scale-2 {
+    display: block;
+    position: relative;
+  }
+
+  .scale-2__bar {
+    width: 428px;
+    height: 6px;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
+
+  .scale-2__toggle {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #cdcdcd;
+    background-color: @background-color-main;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200px;
+    margin-top: 2px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: @background-color-green;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border-color: @background-color-green;
+      border-width: 2px;
+    }
+  }
+}

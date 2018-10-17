@@ -5,11 +5,15 @@
   padding: 0;
   padding-right: 20px;
   padding-left: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 .product__block-group {
   width: 140px;
+}
+
+.product__title {
+  margin: 0;
 }
 
 .product__title-link {
@@ -22,6 +26,8 @@
   font-weight: 400;
   display: block;
   width: 74px;
+  padding-top: 21px;
+  padding-bottom: 13px;
 }
 
 .product__data {
@@ -49,31 +55,70 @@
     padding-left: 38px;
     padding-right: 38px;
     padding-bottom: 40px;
+    padding-top: 151px;
     background-color: @background-color-minor; //удалить
     align-items: center;
     justify-content: center;
+    // margin-bottom: 45px;
+    // background-image: linear-gradient(to bottom, @background-color-main 95px, @background-color-minor 95px);
+    position: relative;
+    margin-top: 95px;
   }
 
   .product__title {
     text-align: center;
+    margin-bottom: 13px;
   }
 
   .product__title-link {
     width: 130px;
     font-size: 20px;
+    padding-top: 13px;
+    background-color: @background-color-minor;
   }
 
   .product__block-group {
-    margin-bottom: 33px;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin-bottom: 25px;
   }
 
   .product__data {
     width: 100%;
-    border-bottom: 1px solid #e6e6e6;
+    font-size: 16px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      background-color: #cdcdcd;
+    }
+  }
+
+  .product__link {
+    margin-bottom: 38px;
+  }
+
+  .product__img {
+    width: 195px; //временно для сетки
+    height: 208px; //временно для сетки
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product__order-link {
+    font-size: 16px;
+    padding-top: 11px;
+    padding-bottom: 9px;
   }
 }
 
