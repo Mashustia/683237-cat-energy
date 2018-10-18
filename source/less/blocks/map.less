@@ -1,11 +1,13 @@
 .map {
   position: relative;
+  margin-top: -38px;
 }
 
 .map__image {
-  background-color: @background-color-minor;
-  width: 320px; //удалить
-  height: 362px; //удалить
+  background-color: #fdf7ef;
+  width: 320px;
+  height: 400px;
+  margin: 0 auto;
 }
 
 .map__iframe {
@@ -13,27 +15,35 @@
   height: 362px;
   width: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
 }
 
 @media (min-width: @tablet-width) {
+  .map {
+    margin-top: -4px;
+  }
+
   .map__image {
-    width: 767px; //удалить
-    height: 400px; //удалить
+    width: 767px;
+    height: 400px;
   }
 
   .map__iframe {
-    height: 400px;
+    height: 396px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .map {
+    margin-top: 0;
+  }
+
   .map__image {
-    width: 1440px; //удалить
-    height: 400px; //удалить
+    width: 1440px;
+    height: 400px;
   }
 
   .map__iframe {

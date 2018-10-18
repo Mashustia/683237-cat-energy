@@ -40,6 +40,49 @@
     background-color: @background-color-green;
     top: 0;
     left: 0;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+  }
+
+  &--first {
+    &::before {
+      background-image: url("../img/advantage-leaf@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
+    }
+  }
+
+  &--second {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
+    }
+  }
+
+  &--third {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
+    }
+  }
+
+  &--fourth {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
+    }
   }
 }
 

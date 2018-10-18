@@ -39,9 +39,14 @@
 
 @media (max-width: @mobile-width-only) {
   .promo {
-    background-image: url("../img/index-promo-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
+    background-size: 320px 305px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -74,8 +79,8 @@
   }
 
   .promo__image {
-    width: 709px; //удалить
-    height: 609px; //удалить
+    width: 709px;
+    height: 609px;
     margin-bottom: 0;
   }
 
@@ -102,7 +107,14 @@
     margin-bottom: 80px;
     margin-top: -116px;
     background-color: @background-color-green;
-    background-image: linear-gradient(to right, @background-color-main 50%, @background-color-green 50%);
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, @background-color-main 50%, #65a93c 50%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 720px 696px, auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, @background-color-main 50%, #65a93c 50%);
+    }
   }
 
   .promo__wrapper {
@@ -121,8 +133,8 @@
   }
 
   .promo__image {
-    width: 552px; //удалить
-    height: 499px; //удалить
+    width: 552px;
+    height: 499px;
     position: absolute;
     top: 142px;
     left: 50%;

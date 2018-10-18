@@ -44,9 +44,8 @@
 }
 
 .product__img {
-  width: 140px;  //удалить
-  height: 144px;  //удалить
-  background-color: red;  //удалить
+  width: 140px;
+  height: 144px;
 }
 
 @media (min-width: @tablet-width) {
@@ -107,12 +106,21 @@
   }
 
   .product__img {
-    width: 195px; //временно для сетки
-    height: 208px; //временно для сетки
+    width: 324px;
+    height: 208px;
     position: absolute;
-    top: -95px;
+    // top: -95px;
     left: 50%;
     transform: translateX(-50%);
+    bottom: 305px;
+  }
+
+  .product--500g .product__img {
+    height: 172px;
+  }
+
+  .product--100g .product__img {
+    height: 208px;
   }
 
   .product__order-link {
@@ -125,5 +133,10 @@
 @media (min-width: @desktop-width) {
   .product {
     width: 245px;
+  }
+
+  .product__img {
+    width: 245px;
+    height: 208px;
   }
 }

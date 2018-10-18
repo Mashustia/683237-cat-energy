@@ -41,7 +41,11 @@
           <h2 class="promo__title">Функциональное
           питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/index-promo-food-mobile@1x.png" alt="Изображение корма Cat Energy курица" width="280" height="271">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-promo-food-desktop@1x.png 1x, img/index-promo-food-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-promo-food-tablet@1x.jpg 1x, img/index-promo-food-tablet@2x.jpg 2x">
+            <img class="promo__image" src="img/index-promo-food-mobile@1x.png" srcset="img/index-promo-food-mobile@2x.png 2x" alt="Изображение корма Cat Energy курица" width="280" height="271">
+          </picture>
           <a class="promo__link button button--index button--green" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -49,13 +53,13 @@
         <h2 class="visually-hidden">Программы питания для Вашего питомца</h2>
         <ul class="programs__list">
           <li class="programs__item">
-            <h3 class="programs__title">Похудение</h3>
+            <h3 class="programs__title programs__title--slim">Похудение</h3>
             <p class="programs__text programs__text--first">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.</p>
             <a class="programs__link" href="#">Каталог slim</a>
           </li>
           <li class="programs__item">
-            <h3 class="programs__title">Набор массы</h3>
+            <h3 class="programs__title programs__title--pro">Набор массы</h3>
             <p class="programs__text programs__text--second">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs__link" href="#">Каталог pro</a>
           </li>
@@ -67,22 +71,22 @@
           <b class="advantages__subject">Как это работает</b>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--first">
-              <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
+              <p class="advantages__text advantages__text--first">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="advantages__item advantages__item--second">
-              <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <p class="advantages__text advantages__text--second">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="advantages__item advantages__item--third">
-              <p class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <p class="advantages__text advantages__text--third">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="advantages__item advantages__item--fourth">
-              <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!</p>
+              <p class="advantages__text advantages__text--fourth">Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!</p>
             </li>
           </ul>
         </div>
       </section>
       <section class="live-story">
-        <div class="live-story__container container">
+        <div class="live-story__wrapper">
           <div class="live-story__left-column">
             <h2 class="live-story__title">Живой пример</h2>
             <p class="live-story__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -104,7 +108,17 @@
             </div>
           </div>
           <div class="live-story__right-column slider">
-            <img class="slider__image" src="img/before-mobile@1x.png" alt="Изображение кота до диеты" width="320" height="240">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до диеты" width="320" height="240">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"
+                alt="Изображение кота до диеты" width="320" height="240">
+            </picture>
             <div class="slider__button-group">
               <button class="slider__button slider__button--before">Было</button>
               <div class="slider__scale-1 scale-1">
@@ -131,7 +145,11 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как к нам проехать</h2>
-        <img class="map__image" src="#" alt="Карта проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Карта проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400">
+        </picture>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4546686702483!2d30.320360984000754!3d59.9386919969057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538859445882" width="320" height="362" allowfullscreen></iframe>
       </section>
       <div class="main-footer__block-group container">

@@ -44,6 +44,31 @@
     left: 2px;
     top: 0;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width: 67px;
+    height: 49px;
+    left: -7px;
+    top: -2px;
+    background-repeat: no-repeat;
+  }
+
+  &--slim {
+    &::after {
+      background-image: url("../img/icon-cat-slim.svg");
+      background-position: 17px 0;
+    }
+  }
+
+  &--pro {
+    &::after {
+      background-image: url("../img/icon-cat-pro.svg");
+      background-position: 0 13px;
+    }
+  }
 }
 
 .programs__text {
@@ -118,6 +143,26 @@
       width: 200px;
       height: 200px;
     }
+
+    &::after {
+      width: 268px;
+      height: 194px;
+      left: auto;
+      right: 8px;
+      top: 4px;
+    }
+
+    &--slim {
+      &::after {
+        background-position: 63px 0;
+      }
+    }
+
+    &--pro {
+      &::after {
+        background-position: 0 55px;
+      }
+    }
   }
 
   .programs__text {
@@ -171,6 +216,27 @@
       height: 100px;
       left: 0;
       top: -28px;
+    }
+
+    &::after {
+      width: 134px;
+      height: 97px;
+      right: auto;
+      left: -19px;
+      top: auto;
+      bottom: -25px;
+    }
+
+    &--slim {
+      &::after {
+        background-position: 32px 0;
+      }
+    }
+
+    &--pro {
+      &::after {
+        background-position: 0 28px;
+      }
     }
   }
 
