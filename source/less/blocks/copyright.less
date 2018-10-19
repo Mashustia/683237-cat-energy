@@ -23,6 +23,10 @@
   display: block;
   color: @text-color-main;
   cursor: pointer;
+
+  &--icon {
+    margin-top: 1px;
+  }
 }
 
 .copyright__link:focus ~ .copyright__link .copyright__image {
@@ -48,5 +52,15 @@
     margin-right: 0;
     margin-left: 0;
     padding: 0;
+  }
+
+  .copyright__link--icon {
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__link--icon {
+    margin-top: 4px;
   }
 }

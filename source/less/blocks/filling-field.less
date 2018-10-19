@@ -57,6 +57,8 @@
   background-color: @background-color-main;
   left: -42px;
   background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: centers;
 }
 
 .filling-field__input + .filling-field__label--round::before,
@@ -126,11 +128,15 @@
 
   &--contact-details {
     margin-left: 10px;
-    padding-right: 32px;
-  }
+    padding-right: 37px;
 
-  &:not:required {
-    border-color: #ff8282;
+    &:focus {
+      padding-right: 37px;
+    }
+
+    &:invalid {
+      padding-right: 37px;
+    }
   }
 }
 
@@ -180,6 +186,10 @@
   fill: @background-color-green;
 }
 
+.filling-field__input:invalid ~ .filling-field__image {
+  fill: #ff8282;
+}
+
 @media (min-width: @tablet-width) {
   .filling-field {
     &--checkbox {
@@ -188,8 +198,6 @@
     }
 
     &--extra {
-      // width: 285px;
-      // margin-right: 60px;
       margin-bottom: 51px;
       width: 245px;
       margin-right: 100px;
@@ -242,8 +250,16 @@
     }
 
     &--contact-details {
-      padding-right: 37px;
+      padding-right: 45px;
       margin-left: 17px;
+
+      &:focus {
+        padding-right: 45px;
+      }
+
+      &:invalid {
+        padding-right: 45px;
+      }
     }
   }
 
