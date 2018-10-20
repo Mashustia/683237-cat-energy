@@ -17,7 +17,7 @@
 }
 
 .product__title-link {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: @text-color-titles;
@@ -54,12 +54,9 @@
     padding-left: 38px;
     padding-right: 38px;
     padding-bottom: 40px;
-    padding-top: 151px;
-    background-color: @background-color-minor; //удалить
+    background-color: @background-color-minor;
     align-items: center;
     justify-content: center;
-    // margin-bottom: 45px;
-    // background-image: linear-gradient(to bottom, @background-color-main 95px, @background-color-minor 95px);
     position: relative;
     margin-top: 95px;
   }
@@ -102,17 +99,18 @@
   }
 
   .product__link {
-    margin-bottom: 38px;
+    margin-bottom: 25px;
+    width: 324px;
+    height: 208px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: -82px;
   }
 
   .product__img {
     width: 324px;
     height: 208px;
-    position: absolute;
-    // top: -95px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 305px;
   }
 
   .product--500g .product__img {
