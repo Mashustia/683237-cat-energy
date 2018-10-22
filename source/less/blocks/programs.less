@@ -20,7 +20,7 @@
 }
 
 .programs__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 24px;
   line-height: 37px;
   color: @text-color-titles;
@@ -44,15 +44,56 @@
     left: 2px;
     top: 0;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim {
+    &::after {
+      background-image: url("../img/icon-cat-slim.svg");
+      width: 50px;
+      height: 50px;
+      left: 2px;
+      top: -2px;
+    }
+  }
+
+  &--pro {
+    &::after {
+      background-image: url("../img/icon-cat-pro.svg");
+      width: 67px;
+      height: 28px;
+      left: -7px;
+      top: 11px;
+    }
+  }
 }
 
 .programs__text {
   margin: 0;
   margin-bottom: 42px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: auto;
+    height: 1px;
+    background-color: @text-color-main;
+    opacity: 0.1;
+    left: 0;
+    right: 0;
+    bottom: -23px;
+  }
 }
 
 .programs__link {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -71,7 +112,7 @@
     width: 25px;
     height: 12px;
     background-color: transparent;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -84,7 +125,7 @@
   &:focus::before,
   &:active::before {
     width: 33px;
-    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
   &:active::before {
@@ -118,6 +159,26 @@
       width: 200px;
       height: 200px;
     }
+
+    &--slim {
+      &::after {
+        width: 141px;
+        height: 194px;
+        left: auto;
+        right: 71px;
+        top: 4px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 268px;
+        height: 113px;
+        left: auto;
+        right: 8px;
+        top: 58px;
+      }
+    }
   }
 
   .programs__text {
@@ -130,7 +191,11 @@
     }
 
     &--second {
-      width: 340px;
+      width: 343px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
@@ -171,6 +236,26 @@
       height: 100px;
       left: 0;
       top: -28px;
+    }
+
+    &--slim {
+      &::after {
+        width: 71px;
+        height: 97px;
+        right: auto;
+        top: -35px;
+        left: 12px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 134px;
+        height: 57px;
+        right: auto;
+        top: -8px;
+        left: -19px;
+      }
     }
   }
 

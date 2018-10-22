@@ -1,8 +1,10 @@
 .contacts {
   background-color: @background-color-main;
+  position: relative;
+  z-index: 3;
 
   &--transparent {
-    background-color: transparent;
+    background-color: @background-color-minor;
   }
   display: flex;
   justify-content: space-between;
@@ -18,13 +20,14 @@
 }
 
 .contacts__text {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: @text-color-titles;
   text-transform: uppercase;
   width: 124px;
   margin: 0;
+  margin-right: auto;
 }
 
 .contacts__address {

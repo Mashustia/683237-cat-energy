@@ -35,6 +35,7 @@
 .socials__image {
   margin-right: auto;
   margin-left: auto;
+  fill: #666666;
 }
 
 @media (min-width: @tablet-width) {
@@ -43,19 +44,32 @@
     padding: 0;
   }
 
-  // предварительно для построения сетки, далее будет удалено
+  .socials__list {
+    width: 140px;
+    padding-right: 16px;
+  }
+
+  .socials__link {
+    width: 30px;
+    height: 28px;
+
+    &--facebook {
+      width: 14px;
+    }
+  }
+
   .socials__image--vkontakte {
-    width: 30px; //временно
-    height: 16px; //временно
+    width: 30px;
+    height: 16px;
   }
 
   .socials__image--instagram {
-    width: 23px; //временно
-    height: 23px; //временно
+    width: 23px;
+    height: 23px;
   }
 
   .socials__image--facebook {
-    width: 14px; //временно
-    height: 28px; //временно
+    width: 14px;
+    height: 28px;
   }
 }

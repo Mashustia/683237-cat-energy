@@ -3,7 +3,7 @@
 }
 
 .advantages__subject {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 36px;
   line-height: 60px;
   color: @text-color-titles;
@@ -40,6 +40,49 @@
     background-color: @background-color-green;
     top: 0;
     left: 0;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+  }
+
+  &--first {
+    &::before {
+      background-image: url("../img/advantage-leaf@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
+    }
+  }
+
+  &--second {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
+    }
+  }
+
+  &--third {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
+    }
+  }
+
+  &--fourth {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
+    }
   }
 }
 
@@ -79,12 +122,10 @@
     &::after {
       position: absolute;
       content: "";
-      // width: 121px;
-      // height: 228px;
       bottom: -12px;
       right: -3px;
       background-color: transparent;
-      font-family: "Oswald", sans-serif;
+      font-family: "Oswald", "Arial Narrow", sans-serif;
       font-weight: 400;
       font-size: 281px;
       line-height: 281px;
