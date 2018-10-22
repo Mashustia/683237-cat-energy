@@ -85,6 +85,10 @@
 .filling-field__input {
   border: 1px solid #e6e6e6;
 
+  &--auto-width {
+    width: 100%;
+  }
+
   &:hover {
     border-color: #cdcdcd;
   }
@@ -94,9 +98,6 @@
     border-width: 2px;
   }
 
-  &--auto-width {
-    width: 100%;
-  }
 
   &--cat-data,
   &--contact-details {
@@ -127,8 +128,8 @@
   }
 
   &--contact-details {
-    margin-left: 10px;
     padding-right: 37px;
+    margin-left: 10px;
 
     &:focus {
       padding-right: 37px;
