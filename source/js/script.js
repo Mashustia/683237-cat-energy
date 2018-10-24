@@ -31,7 +31,7 @@ ymaps.ready(function () {
         iconImageHref: 'img/map-pin.png',
         iconImageSize: [113, 106],
         iconImageOffset: [-50, -130]
-      });
+    });
 
   myMap.geoObjects
     .add(myPlacemark);
