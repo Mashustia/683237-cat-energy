@@ -6,20 +6,19 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-
-// мои переменные
-
-var csso = require('gulp-csso'); // для css.min
+var csso = require("gulp-csso"); // для css.min
 var rename = require("gulp-rename"); // для css.min
-const imagemin = require('gulp-imagemin'); // для min jpg/png/svg
+const imagemin = require("gulp-imagemin"); // для min jpg/png/svg
 const webp = require("gulp-webp"); // для webp conversion
 var rename = require("gulp-rename"); // для svg sprite
-var svgstore = require('gulp-svgstore'); // для svg sprite
+var svgstore = require("gulp-svgstore"); // для svg sprite
 var posthtml = require("gulp-posthtml"); //для posthtml
 var include = require("posthtml-include"); //для posthtml
 var del = require("del"); //для удаления папки build
+var htmlmin = require("gulp-htmlmin"); //для минификации html
+var uglify = require("gulp-uglify"); // для минификации js
 
-// заводим локальный сервер
+// локальный сервер
 
 gulp.task("server", function () {
   server.init({
@@ -33,6 +32,7 @@ gulp.task("server", function () {
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/script.js", gulp.series("js", "refresh"));
 });
 
 // обновление страницы
@@ -41,8 +41,6 @@ gulp.task("refresh", function (done) {
   server.reload();
   done();
 });
-
-// моя оптимизация
 
 // css.min
 
@@ -67,7 +65,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3}),
-      imagemin.jpegtran({ progressive: true }),
+      imagemin.jpegtran({ progressive: true}),
       imagemin.svgo({
         plugins: [
           {removeViewBox: false},
@@ -97,14 +95,26 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img/sprite"));
 });
 
-// posthtml
+// posthtml и min html
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
+});
+
+// min js
+
+gulp.task("js", function () {
+  return gulp.src("source/js/script.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js"))
+  .pipe(uglify())
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest("build/js"))
 });
 
 // удаление папки билд
@@ -133,9 +143,8 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "js"
 ));
 
 gulp.task("start", gulp.series("build", "server"));
-
-// конец моей оптимизации
