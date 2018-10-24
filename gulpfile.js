@@ -57,7 +57,8 @@ gulp.task("css", function () {
     .pipe(server.stream())
     .pipe(csso())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 // min jpg/png/svg

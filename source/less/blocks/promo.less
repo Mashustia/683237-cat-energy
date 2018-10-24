@@ -30,6 +30,7 @@
   width: 280px;
   height: 271px;
   margin-bottom: 4px;
+  background-color: transparent;
 }
 
 .promo__link {
@@ -39,13 +40,13 @@
 
 @media (max-width: @mobile-width-only) {
   .promo {
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, #65a93c 305px, @background-color-main 305px);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: 320px 305px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to bottom, #65a93c 305px, @background-color-main 305px);
     }
   }
 }
