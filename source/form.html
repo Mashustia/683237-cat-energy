@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgxuse.min.js" defer></script>
   </head>
 
   <body>
+    <div style="display:none;">
+      <include src="build/img/sprite/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo logo" href="index.html" tabindex="1">
@@ -91,15 +95,15 @@
                 <li class="field-group__item filling-field filling-field--contact-details">
                   <label class="filling-field__label" for="email">E-mail:*</label>
                   <input class="filling-field__input filling-field__input--auto-width filling-field__input--contact-details" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="filling-field__image filling-field__image--mail" width="18" height="14">
-                    <use xlink:href="img/icon-sprite.svg#icon-mobile-menu"></use>
+                  <svg class="filling-field__image filling-field__image--mail" width="18" height="14" aria-label="Изображение письма">
+                    <use xlink:href="#icon-mail"></use>
                   </svg>
                 </li>
                 <li class="field-group__item filling-field filling-field--contact-details">
                   <label class="filling-field__label" for="tel-number">Телефон:*</label>
                   <input class="filling-field__input filling-field__input--auto-width filling-field__input--contact-details" type="tel" name="tel-number" id="tel-number" placeholder="8 (960) 900-60-90" required>
-                  <svg class="filling-field__image filling-field__image--phone" width="21" height="21">
-                    <use xlink:href="img/icon-sprite.svg#icon-phone"></use>
+                  <svg class="filling-field__image filling-field__image--phone" width="21" height="21" aria-label="Изображение телефона">
+                    <use xlink:href="#icon-phone"></use>
                   </svg>
                 </li>
               </ul>
@@ -181,25 +185,25 @@
           <ul class="socials__list">
             <li class="socials__item">
               <a class="socials__link socials__link--vkontakte" href="#">
-                <span class="visually-hidden">Вконтакте</span>
-                <svg class="socials__image socials__image--vkontakte" width="22" height="12">
-                  <use xlink:href="img/icon-sprite.svg#icon-vk-mobile"></use>
+                <span class="visually-hidden">Cat Energy Вконтакте</span>
+                <svg class="socials__image socials__image--vkontakte" width="22" height="12" aria-label="Логотип Вконтакте">
+                  <use xlink:href="#icon-vkontakte-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--instagram" href="#">
-                <span class="visually-hidden">Instagram</span>
-                <svg class="socials__image socials__image--instagram" width="17" height="17">
-                  <use xlink:href="img/icon-sprite.svg#icon-instagram-mobile"></use>
+                <span class="visually-hidden">Cat Energy в Instagram</span>
+                <svg class="socials__image socials__image--instagram" width="17" height="17" aria-label="Логотип Instagram">
+                  <use xlink:href="#icon-instagram-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--facebook" href="#">
-                <span class="visually-hidden">Facebook</span>
-                <svg class="socials__image socials__image--facebook" width="10" height="19">
-                  <use xlink:href="img/icon-sprite.svg#icon-facebook-mobile"></use>
+                <span class="visually-hidden">Cat Energy в Facebook</span>
+                <svg class="socials__image socials__image--facebook" width="10" height="19" aria-label="Логотип Facebook">
+                  <use xlink:href="#icon-facebook-mobile"></use>
                 </svg>
               </a>
             </li>
@@ -209,7 +213,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
             <svg class="copyright__image" width="26" height="34" aria-label="Переход на сайт в HTML Academy «Профессиональный HTML и CSS, уровень 2»">
-              <use xlink:href="img/icon-sprite.svg#htmlacademy"></use>
+              <use xlink:href="#htmlacademy"></use>
             </svg>
           </a>
         </div>
