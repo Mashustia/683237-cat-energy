@@ -35,10 +35,19 @@
   .site-list {
     flex-direction: row;
     width: 439px;
-    justify-content: space-between;
+    // justify-content: space-between;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
+    flex-wrap: wrap;
+  }
+
+  .site-list__item {
+    margin-left: 34px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   .site-list__link {
@@ -64,8 +73,8 @@
 @media (min-width: @desktop-width) {
   .site-list {
     flex-direction: row;
-    width: 479px;
-    justify-content: space-between;
+    width: 480px;
+    // justify-content: space-between;
     font-size: 20px;
     background-color: transparent;
 
