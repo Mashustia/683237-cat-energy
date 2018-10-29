@@ -39,7 +39,8 @@
   border: solid 1px #cdcdcd;
 }
 
-.filling-field__input:hover + .filling-field__label--checkbox::before {
+.filling-field__input:hover + .filling-field__label--checkbox::before,
+.filling-field__input:focus + .filling-field__label--checkbox::before {
   border-color: #bababa;
 }
 
@@ -315,7 +316,11 @@
   .filling-field {
     &--contact-details {
       width: 570px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 20px;
+      }
     }
 
     &--extra {
@@ -325,7 +330,7 @@
         margin-right: 80px;
       }
 
-      &:last-child {
+      &:nth-child(4n) {
         margin-right: 0;
       }
     }

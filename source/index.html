@@ -7,12 +7,12 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="js/script.min.js" as="script">
 
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgxuse.min.js" defer></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=<2c074ab2-1513-4fd4-abca-504371bc1c11>&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2c074ab2-1513-4fd4-abca-504371bc1c11&lang=ru_RU" type="text/javascript"></script>
   </head>
 
   <body>
@@ -56,7 +56,7 @@
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-promo-food-desktop@1x.webp 1x, img/index-promo-food-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index-promo-food-tablet@1x.webp 1x, img/index-promo-food-tablet@2x.webp 2x">
-            <source type="image/webp" type="image/webp" srcset="img/index-promo-food-mobile@1x.webp 1x, img/index-promo-food-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-promo-food-mobile@1x.webp 1x, img/index-promo-food-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/index-promo-food-desktop@1x.png 1x, img/index-promo-food-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-promo-food-tablet@1x.jpg 1x, img/index-promo-food-tablet@2x.jpg 2x">
             <img class="promo__image" src="img/index-promo-food-mobile@1x.png" srcset="img/index-promo-food-mobile@2x.png 2x" alt="Изображение корма Cat Energy курица" width="280" height="271">
@@ -126,16 +126,16 @@
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source type="image/webp" type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
               <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до диеты" width="320" height="240">
+              <img class="slider__image slider__image--before slider__image--visible" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до диеты" width="320" height="240">
             </picture>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source type="image/webp" type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
               <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
@@ -171,12 +171,11 @@
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Карта проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400">
         </picture>
-        <!-- <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4546686702483!2d30.320360984000754!3d59.9386919969057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538859445882" width="320" height="362" allowfullscreen></iframe> -->
         <div class="map__iframe" id="map"></div>
       </section>
       <div class="main-footer__block-group container">
@@ -189,7 +188,7 @@
             <li class="socials__item">
               <a class="socials__link socials__link--vkontakte" href="#">
                 <span class="visually-hidden">Cat Energy Вконтакте</span>
-                <svg class="socials__image socials__image--vkontakte" width="22" height="12" aria-label="Логотип Вконтакте">
+                <svg class="socials__image socials__image--vkontakte" width="22" height="12" aria-label="Логотип Вконтакте" focusable="false">
                   <use xlink:href="#icon-vkontakte-mobile"></use>
                 </svg>
               </a>
@@ -197,7 +196,7 @@
             <li class="socials__item">
               <a class="socials__link socials__link--instagram" href="#">
                 <span class="visually-hidden">Cat Energy в Instagram</span>
-                <svg class="socials__image socials__image--instagram" width="17" height="17" aria-label="Логотип Instagram">
+                <svg class="socials__image socials__image--instagram" width="17" height="17" aria-label="Логотип Instagram" focusable="false">
                   <use xlink:href="#icon-instagram-mobile"></use>
                 </svg>
               </a>
@@ -205,7 +204,7 @@
             <li class="socials__item">
               <a class="socials__link socials__link--facebook" href="#">
                 <span class="visually-hidden">Cat Energy в Facebook</span>
-                <svg class="socials__image socials__image--facebook" width="10" height="19" aria-label="Логотип Facebook">
+                <svg class="socials__image socials__image--facebook" width="10" height="19" aria-label="Логотип Facebook" focusable="false">
                   <use xlink:href="#icon-facebook-mobile"></use>
                 </svg>
               </a>
@@ -215,13 +214,13 @@
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
-            <svg class="copyright__image" width="26" height="34" aria-label="Переход на сайт в HTML Academy «Профессиональный HTML и CSS, уровень 2»">
+            <svg class="copyright__image" width="26" height="34" aria-label="Переход на сайт в HTML Academy «Профессиональный HTML и CSS, уровень 2»" focusable="false">
               <use xlink:href="#htmlacademy"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

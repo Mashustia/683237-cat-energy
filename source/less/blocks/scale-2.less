@@ -25,7 +25,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 200px;
+    left: 0;
     margin-top: 2px;
 
     &::before {
@@ -49,6 +49,11 @@
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border-color: @background-color-green;
       border-width: 2px;
+    }
+
+    &--full {
+      left: auto;
+      right: 0;
     }
   }
 }
