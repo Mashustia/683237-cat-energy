@@ -54,13 +54,32 @@
     padding-bottom: 69px;
     background-color: @background-color-main;
     background-image: linear-gradient(to bottom, @background-color-main 57.2%, @background-color-minor 57.2%);
+    position: relative;
 
-    &--slider {
-      background-image: linear-gradient(to bottom, @background-color-main 57.2%, #eaeaea 57.2%);
+    &--slider-before {
+      &::before {
+        position: absolute;
+        content: "";
+        width: calc((100% - 768px) / 2 + 189px);
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, @background-color-main 57.2%, #eaeaea 57.2%);
+      }
+    }
+
+
+    &--slider-after {
+      &::before {
+        width: calc((100% - 768px) / 2 + 583px);
+      }
     }
   }
 
   .live-story__wrapper {
+    position: relative;
+    z-index: 2;
     width: 708px;
   }
 
@@ -114,8 +133,17 @@
     padding-bottom: 9px;
     background-image: linear-gradient(to bottom, @background-color-main 28.92%, @background-color-minor 28.92%);
 
-    &--slider {
-      background-image: linear-gradient(to bottom, @background-color-main 28.92%, #eaeaea 28.92%);
+    &--slider-before {
+      &::before {
+        width: calc((100% - 1300px) / 2 + 130px);
+        background-image: linear-gradient(to bottom, @background-color-main 28.92%, #eaeaea 28.92%);
+      }
+    }
+
+    &--slider-after {
+      &::before {
+        width: calc((100% - 1300px) / 2 + 524px);
+      }
     }
   }
 

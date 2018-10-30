@@ -46,29 +46,20 @@ if (buttonBefore && buttonAfter) {
   var sliderScaleLittle = document.querySelector(".scale-1__bar");
   var sliderScaleBig = document.querySelector(".scale-2__toggle");
   var sliderBackground = document.querySelector(".live-story");
-  var progressText = document.querySelectorAll(".progress__text-inner");
 
   buttonAfter.addEventListener("click", function (evt) {
-    evt.preventDefault();
     imageAfter.classList.add("slider__image--visible");
     imageBefore.classList.remove("slider__image--visible");
     sliderScaleLittle.classList.add("scale-1__bar--full");
-    sliderScaleBig.classList.add("scale-2__toggle--full");
-    sliderBackground.classList.add("live-story--slider");
-    for (var i = 0; i < progressText.length; i++) {
-      progressText[i].classList.add("progress__text-inner--slider");
-    };
+    sliderScaleBig.classList.add("scale-2__toggle--after");
+    sliderBackground.classList.add("live-story--slider-after");
   });
 
   buttonBefore.addEventListener("click", function (evt) {
-    evt.preventDefault();
     imageBefore.classList.add("slider__image--visible");
     imageAfter.classList.remove("slider__image--visible");
     sliderScaleLittle.classList.remove("scale-1__bar--full");
-    sliderScaleBig.classList.remove("scale-2__toggle--full");
-    sliderBackground.classList.remove("live-story--slider");
-    for (var i = 0; i < progressText.length; i++) {
-      progressText[i].classList.remove("progress__text-inner--slider");
-    };
+    sliderScaleBig.classList.remove("scale-2__toggle--after");
+    sliderBackground.classList.remove("live-story--slider-after");
   });
 };
